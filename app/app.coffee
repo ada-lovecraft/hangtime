@@ -11,7 +11,6 @@ App = angular.module('app', [
   'app.services'
   'partials'
   'firebase'
-  'ui.bootstrap'
 ])
 
 App.config([
