@@ -1,0 +1,49 @@
+div(ng-controller="OrganizationController")
+	.row
+		.col-md-10
+			.panel.panel-default
+				.panel-heading
+					.panel-title {{organization.name}} Chat
+				.panel-body
+					.col-md-2
+						ul.list-unstyled
+							li(ng-repeat="user in organization.users") 
+								span.status.circle
+								span {{users[user.id].username}}
+					.col-md-10
+						.panel.panel-default
+							.panel-body
+								div(ng-repeat="msg in organization.messages") 
+									strong <{{users[msg.from].username}}> 
+									span {{msg.message}}
+						input.col-md-12(type="text", ng-model="msg",ng-keyup="addMessage($event)",placeholder="Message...")
+		.col-md-2
+			.panel.panel-default
+				.panel-body
+					span.status.circle
+					span {{organization.name}} Chat
+			div(ng-repeat="chat in user.chats") 
+				.panel.panel-default
+					.panel-body
+						span.status.circle
+						span {{users[chat.user.id].username}}
+						span.pull-right.close &times;
+	.row
+		.col-md-2
+			.panel.panel-default
+				.panel-heading
+					.panel-title Mood
+				.panel-body
+					p :D
+		.col-md-2
+			.panel.panel-default
+				.panel-heading
+					.panel-title Projects
+				.panel-body
+					p 12
+		.col-md-2
+			.panel.panel-default
+				.panel-heading
+					.panel-title Members
+				.panel-body
+					p 257

@@ -1,0 +1,32 @@
+{
+  "name": "angular-brunch-seed",
+  "repo": "scotch/angular-brunch-seed",
+  "version": "0.3.0",
+  "main": "_public/js/app.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "console-polyfill": "~0.1.0",
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0",
+    "angular": "1.2.0-rc.2",
+    "angular-resource": "1.2.0-rc.2",
+    "angular-route": "1.2.0-rc.2",
+    "angular-cookies": "1.2.0-rc.2",
+    "lodash": "~2.1.0",
+    "angular-ui-bootstrap": "3d287809efc5de584128efbd92160207a2b0ebd6"
+  },
+  "overrides": {
+    "bootstrap-less": {
+      "ignore": [
+        "*"
+      ]
+    },
+    "angular-mocks": {
+      "main": "README.md"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+div(ng-controller="AccountController")
+	div(ng-show="user")
+		p {{user.name}}
+		h1 Organizations
+		ul
+			li(ng-repeat="organization in user.hangtime_organizations")
+				a(href="#/organization/{{organization.id}}") {{organizations[organization.id].name}}
+		div(ng-hide="user.hangtime_organizations") 
+			p No organizations
+		input(type="text",ng-model="newOrgName",placeholder="New Organization Name")
+		button.btn.btn-primary(ng-click="addOrganization()") Add A New Organization
+	div(ng-hide="user")
+		p You must
+			button.btn.btn-default(ng-click="login()") login

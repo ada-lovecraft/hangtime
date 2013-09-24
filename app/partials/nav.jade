@@ -1,0 +1,8 @@
+ul.nav.navbar-nav
+	li(ng-class="getClass('/account')")
+		a(ng-href='#/account') Account
+	li(ng-show="user")
+		a(ng-href="#/view1", ng-click="logout()") Logout
+	li(ng-hide="user")
+		a(ng-href="#/view1", ng-click="login()") Login
+
