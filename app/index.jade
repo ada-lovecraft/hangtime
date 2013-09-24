@@ -7,7 +7,7 @@ html(lang='en', ng-app='app')
     meta(name='description', content='')
     meta(name='author', content='')
     title(ng-bind-template='{{pageTitle}}')
-    link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='css/app.css')
     //-script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     //if lte IE 7
       script(src='http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js')
@@ -18,12 +18,12 @@ html(lang='en', ng-app='app')
       window.brunch['auto-reload'] = {
         enabled: true
       };
-    script(src='/js/vendor.js')
-    script(src='/js/partials.js')
+    script(src='js/vendor.js')
+    script(src='js/partials.js')
     script(src='https://cdn.firebase.com/v0/firebase.js')
     script(src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js')
     script(src='https://cdn.firebase.com/v0/firebase-simple-login.js')  
-    script(src='/js/app.js')
+    script(src='js/app.js')
   body(ng-controller='AppCtrl')
     .navbar.navbar-default
       .navbar-header
